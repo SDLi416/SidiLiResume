@@ -6,6 +6,7 @@ import {FC, Fragment, memo, useCallback, useMemo, useState} from 'react';
 
 import {SectionId} from '../../data/data';
 import {useNavObserver} from '../../hooks/useNavObserver';
+import LanSelectableButtons from './LanSelectableButtons';
 
 export const headerID = 'headerNav';
 
@@ -38,7 +39,7 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
     const inactiveClass = classNames(baseClass, 'text-neutral-100');
     return (
       <header className="fixed top-0 z-50 hidden w-full bg-neutral-900/50 p-4 backdrop-blur sm:block" id={headerID}>
-        <nav className="flex justify-center gap-x-8">
+        <nav className="relative flex justify-center gap-x-8 items-center w-full">
           {navSections.map(section => (
             <NavItem
               activeClass={activeClass}
@@ -48,6 +49,9 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
               section={section}
             />
           ))}
+          <div className="absolute right-0">
+            <LanSelectableButtons />
+          </div>
         </nav>
       </header>
     );
@@ -107,6 +111,9 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}
                       section={section}
                     />
                   ))}
+                  <div className="absolute bottom-5 left-5">
+                    <LanSelectableButtons />
+                  </div>
                 </nav>
               </div>
             </Transition.Child>
