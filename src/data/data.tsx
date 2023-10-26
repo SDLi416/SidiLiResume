@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'meta.title',
+  description: "meta.description",
 };
 
 /**
@@ -104,16 +104,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `about.description`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'about.label.location', text: 'Victoria, BC', Icon: MapIcon},
+    {label: 'about.label.age', text: '29', Icon: CalendarIcon},
+    {label: 'about.label.nationality', text: 'Canadian / Irish', Icon: FlagIcon},
+    {label: 'about.label.interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
+    {label: 'about.label.study', text: 'University of Victoria', Icon: AcademicCapIcon},
+    {label: 'about.label.employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
   ],
 };
 

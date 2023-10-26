@@ -6,6 +6,7 @@ import {FC, Fragment, memo, useCallback, useMemo, useState} from 'react';
 
 import {SectionId} from '../../data/data';
 import {useNavObserver} from '../../hooks/useNavObserver';
+import {useTranslation} from '../../hooks/useTranslation';
 import LanSelectableButtons from './LanSelectableButtons';
 
 export const headerID = 'headerNav';
@@ -131,13 +132,14 @@ const NavItem: FC<{
   inactiveClass: string;
   onClick?: () => void;
 }> = memo(({section, current, inactiveClass, activeClass, onClick}) => {
+  const {t} = useTranslation();
   return (
     <Link
       className={classNames(current ? activeClass : inactiveClass)}
       href={`/#${section}`}
       key={section}
       onClick={onClick}>
-      {section}
+      {t(section)}
     </Link>
   );
 });

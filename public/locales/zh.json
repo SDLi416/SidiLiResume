@@ -1,3 +1,23 @@
 {
-  "hero.name": "我是李思迪"
+  "meta.title": "李思迪的简历",
+  "meta.description": "",
+
+  "hero.name": "我是李思迪",
+  "about": "关于",
+  "contact": "联系我",
+  "portfolio": "作品集",
+  "resume": "简历",
+  "skills": "技能",
+  "stats": "统计",
+  "testimonials": "推荐",
+
+  "about.title": "关于我",
+  "about.description": "Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+
+  "about.label.location": "位置",
+  "about.label.age": "年龄",
+  "about.label.nationality": "国籍",
+  "about.label.interests": "兴趣",
+  "about.label.study": "学历",
+  "about.label.employment": "工作经历"
 }

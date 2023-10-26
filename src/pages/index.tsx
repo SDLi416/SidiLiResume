@@ -10,14 +10,16 @@ import Portfolio from '../components/Sections/Portfolio';
 import Resume from '../components/Sections/Resume';
 import Testimonials from '../components/Sections/Testimonials';
 import {homePageMeta} from '../data/data';
+import {useTranslation} from '../hooks/useTranslation';
 
 // eslint-disable-next-line react-memo/require-memo
 const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
 
 const Home: FC = memo(() => {
   const {title, description} = homePageMeta;
+  const {t} = useTranslation();
   return (
-    <Page description={description} title={title}>
+    <Page description={t(description)} title={t(title)}>
       <Header />
       <Hero />
       <About />

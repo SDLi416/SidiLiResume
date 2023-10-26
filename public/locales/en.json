@@ -1,3 +1,22 @@
 {
-  "hero.name": "I'm Sidi."
+  "meta.title": "Sidi Li's Resume",
+  "meta.description": "",
+
+  "hero.name": "I'm Sidi.",
+  "about": "About",
+  "contact": "Contact",
+  "portfolio": "Portfolio",
+  "resume": "Resume",
+  "skills": "Skills",
+  "stats": "Stats",
+  "testimonials": "Testimonials",
+
+  "about.title": "About Me",
+  "about.description": "Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+  "about.label.location": "Location",
+  "about.label.age": "Age",
+  "about.label.nationality": "Nationality",
+  "about.label.interests": "Interests",
+  "about.label.study": "Study",
+  "about.label.employment": "Employment"
 }
