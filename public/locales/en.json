@@ -40,5 +40,17 @@
   "about.nationality": "China",
   "about.interests": "Video games, Traveling, Food",
   "about.study": "Illinois Institute of Technology/Master of Artificial Intelligence/Graduated in 2024",
-  "about.employment": "NetDragon Websoft Inc, Breo Technology, etc."
+  "about.employment": "NetDragon Websoft Inc, Breo Technology, etc.",
+
+  "education.title": "Education",
+
+  "education.iit.title": "Master of Artificial Intelligence",
+  "education.iit.location": "Illinois Institute of Technology",
+  "education.iit.date": "Spring 2024",
+  "education.iit.content": "During my Master's in Artificial Intelligence, I delved into the core disciplines of AI, including Machine Learning, Deep Learning, Natural Language Processing, and the principles of databases. This academic journey has not only armed me with cutting-edge knowledge in AI technologies but also honed my ability to apply theoretical concepts in practical scenarios.",
+
+  "education.scnu.title": "Bachelor of Physics",
+  "education.scnu.location": "South China Normal University",
+  "education.scnu.date": "July 2021",
+  "education.scnu.content": "I specialized in Physics during my university studies, delving deeply into quantum mechanics, electrodynamics, and linear algebra. I also expanded my academic horizon with courses in education and educational psychology, aiming to integrate core scientific principles with effective teaching methodologies."
 }

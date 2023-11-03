@@ -41,5 +41,15 @@
   "about.nationality": "中国",
   "about.interests": "电子游戏, 旅游, 美食",
   "about.study": "伊利诺伊理工大学/人工智能硕士/2024年毕业",
-  "about.employment": "网龙网络公司, 倍轻松科技等"
+  "about.employment": "网龙网络公司, 倍轻松科技等",
+
+  "education.title": "教育经历",
+  "education.iit.title": "人工智能硕士",
+  "education.iit.location": "伊利诺伊理工大学",
+  "education.iit.date": "2024年春季",
+  "education.iit.content": "在攻读人工智能硕士期间, 我深入研习了人工智能的各个分支领域, 包括机器学习、深度学习、自然语言处理, 以及数据库原理等核心课程。这段学术经历不仅让我掌握了AI技术的前沿知识, 而且培养了我将理论应用于实践的能力。",
+  "education.scnu.title": "物理学学士",
+  "education.scnu.location": "华南师范大学",
+  "education.scnu.date": "2021年7月",
+  "education.scnu.content": "在大学期间，我专攻物理学，深入研究了量子力学、电动力学和线性代数。同时，我还通过教育学和教育心理学课程拓宽了学术视野，旨在将核心科学原理与有效的教学方法相结合。"
 }
