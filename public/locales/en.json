@@ -3,6 +3,22 @@
   "meta.description": "",
 
   "hero.name": "I'm Sidi.",
+  "hero.intro.1": "A ",
+  "hero.intro.2": "seasoned iOS developer",
+  "hero.intro.3": " with experience in ",
+  "hero.intro.4": "Web development",
+  "hero.intro.5": ", passionately curious about ",
+  "hero.intro.6": "AR and AI technologies",
+  "hero.intro.7": ". As a graduate student in ",
+  "hero.intro.8": "Artificial Intelligence",
+  "hero.intro.9": ", I am dedicated to integrating advanced technology with innovative thinking.",
+
+  "hero.hobby.1": "In my spare time, ",
+  "hero.hobby.2": "Animation, Comics, and Games ",
+  "hero.hobby.3": "are my passions. I firmly believe that, whether it's creating virtual worlds or enriching real-life experiences, ",
+  "hero.hobby.4": "technology and creativity",
+  "hero.hobby.5": " can always forge new frontiers.",
+
   "about": "About",
   "contact": "Contact",
   "portfolio": "Portfolio",
@@ -12,11 +28,17 @@
   "testimonials": "Testimonials",
 
   "about.title": "About Me",
-  "about.description": "Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+  "about.description": "A seasoned iOS developer well-versed in web front-end, with a passion for AR and AI technologies. Currently pursuing a Master's in Artificial Intelligence, I am focused on blending technical expertise with innovative thinking, aspiring to leverage my substantial development experience and enthusiasm in the field of AI.",
   "about.label.location": "Location",
   "about.label.age": "Age",
   "about.label.nationality": "Nationality",
   "about.label.interests": "Interests",
   "about.label.study": "Study",
-  "about.label.employment": "Employment"
+  "about.label.employment": "Employment",
+  "about.location": "China, Shenzhen",
+  "about.age": "31",
+  "about.nationality": "China",
+  "about.interests": "Video games, Traveling, Food",
+  "about.study": "Illinois Institute of Technology/Master of Artificial Intelligence/Graduated in 2024",
+  "about.employment": "NetDragon Websoft Inc, Breo Technology, etc."
 }

@@ -3,6 +3,22 @@
   "meta.description": "",
 
   "hero.name": "我是李思迪",
+  "hero.intro.1": "一名",
+  "hero.intro.2": "资深iOS开发者",
+  "hero.intro.3": ",兼修",
+  "hero.intro.4": "Web开发",
+  "hero.intro.5": ",对",
+  "hero.intro.6": "AR和AI技术",
+  "hero.intro.7": "充满探索热情。作为",
+  "hero.intro.8": "人工智能硕士研究生",
+  "hero.intro.9": "，致力于将先进技术与创新思维相结合。",
+
+  "hero.hobby.1": "在业余时间，",
+  "hero.hobby.2": "动画、漫画和游戏",
+  "hero.hobby.3": "是我的热爱。我坚信，不论是构建虚拟世界还是丰富现实生活，",
+  "hero.hobby.4": "技术和创意",
+  "hero.hobby.5": "总能开辟新天地。",
+
   "about": "关于",
   "contact": "联系我",
   "portfolio": "作品集",
@@ -12,12 +28,18 @@
   "testimonials": "推荐",
 
   "about.title": "关于我",
-  "about.description": "Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+  "about.description": "熟悉Web前端的资深iOS开发者, 对AR与AI技术充满热情。目前正在攻读人工智能硕士学位, 专注于将技术专长与创新思维结合, 期望在AI领域发挥我深厚的开发经验和热情。",
 
   "about.label.location": "位置",
   "about.label.age": "年龄",
   "about.label.nationality": "国籍",
   "about.label.interests": "兴趣",
   "about.label.study": "学历",
-  "about.label.employment": "工作经历"
+  "about.label.employment": "工作经历",
+  "about.location": "中国, 广东省, 深圳市",
+  "about.age": "31",
+  "about.nationality": "中国",
+  "about.interests": "电子游戏, 旅游, 美食",
+  "about.study": "伊利诺伊理工大学/人工智能硕士/2024年毕业",
+  "about.employment": "网龙网络公司, 倍轻松科技等"
 }

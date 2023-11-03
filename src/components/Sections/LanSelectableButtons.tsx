@@ -5,7 +5,7 @@ import {LanguageContext} from '../../contexts/LanguageContext';
 
 const LanSelectableButtons: React.FC = () => {
   const {locale, changeLanguage} = useContext(LanguageContext) ?? {};
-  const [selectedLanguage, setSelectedLanguage] = useState(locale === 'en' ? 'English' : '中文');
+  const [, setSelectedLanguage] = useState(locale === 'en' ? 'English' : '中文');
 
   useEffect(() => {
     setSelectedLanguage(locale === 'en' ? 'English' : '中文');

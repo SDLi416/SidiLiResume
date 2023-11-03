@@ -7,13 +7,15 @@ import {
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
+import {FC, memo} from 'react';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import {useTranslation} from '../hooks/useTranslation';
+import heroImage from '../images/header-background1.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -26,7 +28,7 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
+import testimonialImage from '../images/testimonial.png';
 import {
   About,
   ContactSection,
@@ -64,26 +66,34 @@ export const SectionId = {
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
+const HeroDescription: FC = memo(() => {
+  const {t} = useTranslation();
+  return (
+    <>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        {[...Array(9).keys()].map((i) => (
+          <>
+            {(i + 1) % 2 === 0 ? <strong className="text-stone-100">{t(`hero.intro.${i + 1}`)}</strong> : t(`hero.intro.${i + 1}`)}
+          </>
+        ))}
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        {[...Array(5).keys()].map((i) => (
+          <>
+            {(i + 1) % 2 === 0 ? <strong className="text-stone-100">{t(`hero.hobby.${i + 1}`)}</strong> : t(`hero.hobby.${i + 1}`)}
+          </>
+        ))}
+      </p>
+    </>
+  )})
+
 /**
  * Hero section
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
   name: `hero.name`,
-  description: (
-    <>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
-      </p>
-    </>
-  ),
+  description: <HeroDescription />,
   actions: [
     {
       href: '/assets/resume.pdf',
@@ -106,12 +116,12 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `about.description`,
   aboutItems: [
-    {label: 'about.label.location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'about.label.age', text: '29', Icon: CalendarIcon},
-    {label: 'about.label.nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'about.label.interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'about.label.study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'about.label.employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'about.label.location', text: 'about.location', Icon: MapIcon},
+    {label: 'about.label.age', text: 'about.age', Icon: CalendarIcon},
+    {label: 'about.label.nationality', text: 'about.nationality', Icon: FlagIcon},
+    {label: 'about.label.interests', text: 'about.interests', Icon: SparklesIcon},
+    {label: 'about.label.study', text: 'about.study', Icon: AcademicCapIcon},
+    {label: 'about.label.employment', text: 'about.employment', Icon: BuildingOffice2Icon},
   ],
 };
 
