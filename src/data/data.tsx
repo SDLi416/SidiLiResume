@@ -291,26 +291,16 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
+    date: 'work.nd.date',
+    location: 'work.nd.location',
+    title: 'work.nd.title',
+    content: 'work.nd.content',
   },
   {
     date: 'March 2007 - February 2010',
     location: 'Garage Startup Studio',
     title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
+    content: '111',
   },
 ];
 
@@ -342,29 +332,31 @@ export const testimonial: TestimonialSection = {
  * Contact section
  */
 
+const myEmail = 'icubic@qq.com'
+
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: 'mail.title',
+  description: 'mail.description',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: myEmail,
+      href: `mailto:${myEmail}`,
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Shenzhen, China',
+      href: 'https://www.google.com/maps/place/Shenzhen/@22.5551603,114.0538788,11z',
     },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
+    // {
+    //   type: ContactType.Instagram,
+    //   text: '@tbakerx',
+    //   href: 'https://www.instagram.com/tbakerx/',
+    // },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'SDLi416',
+      href: 'https://github.com/SDLi416',
     },
   ],
 };

@@ -1,4 +1,5 @@
 // Modules
+declare module 'nodemailer';
 
 declare module '*.jpg' {
   const value: string;

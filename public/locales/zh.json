@@ -51,5 +51,19 @@
   "education.scnu.title": "物理学学士",
   "education.scnu.location": "华南师范大学",
   "education.scnu.date": "2021年7月",
-  "education.scnu.content": "在大学期间，我专攻物理学，深入研究了量子力学、电动力学和线性代数。同时，我还通过教育学和教育心理学课程拓宽了学术视野，旨在将核心科学原理与有效的教学方法相结合。"
+  "education.scnu.content": "在大学期间，我专攻物理学，深入研究了量子力学、电动力学和线性代数。同时，我还通过教育学和教育心理学课程拓宽了学术视野，旨在将核心科学原理与有效的教学方法相结合。",
+
+  "work.title": "工作经历",
+  "work.nd.title": "高级软件工程师",
+  "work.nd.location": "网龙网络控股有限公司",
+  "work.nd.date": "2020年 4月 - 2023年 2月",
+
+  "mail.title": "请联系我",
+  "mail.description": "您可以直接给我发送消息, 或者通过以下方式来联系我:",
+  "mail.success.tips": "消息已成功发送。我已收到您的消息，稍后查看后会尽快回复您。谢谢！",
+  "mail.send.btn" : "发送消息",
+  "mail.placeholder.name" : "昵称",
+  "mail.placeholder.mail" : "联系邮箱",
+  "mail.placeholder.message" : "信息内容"
+
 }

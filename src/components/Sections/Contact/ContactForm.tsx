@@ -1,5 +1,7 @@
 import {FC, memo, useCallback, useMemo, useState} from 'react';
 
+import {useTranslation} from '../../../hooks/useTranslation';
+
 interface FormData {
   name: string;
   email: string;
@@ -13,10 +15,13 @@ const ContactForm: FC = memo(() => {
       email: '',
       message: '',
     }),
-    [],
+    []
   );
 
   const [data, setData] = useState<FormData>(defaultData);
+  const [isSending, setIsSending] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const {t} = useTranslation();
 
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
@@ -26,18 +31,33 @@ const ContactForm: FC = memo(() => {
 
       setData({...data, ...fieldData});
     },
-    [data],
+    [data]
   );
 
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+      setIsSending(true);
+      try {
+        const response = await fetch('/api/sendEmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+          throw new Error('Error sending email');
+        }
+        console.log('Email sent successfully');
+        setShowSuccess(true);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsSending(false);
+      }
     },
-    [data],
+    [data]
   );
 
   const inputClasses =
@@ -45,13 +65,13 @@ const ContactForm: FC = memo(() => {
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+      <input className={inputClasses} name="name" onChange={onChange} placeholder={t('mail.placeholder.name')} required type="text" />
       <input
         autoComplete="email"
         className={inputClasses}
         name="email"
         onChange={onChange}
-        placeholder="Email"
+        placeholder={t('mail.placeholder.mail')}
         required
         type="email"
       />
@@ -60,16 +80,18 @@ const ContactForm: FC = memo(() => {
         maxLength={250}
         name="message"
         onChange={onChange}
-        placeholder="Message"
+        placeholder={t('mail.placeholder.message')}
         required
         rows={6}
       />
       <button
         aria-label="Submit contact form"
         className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
+        disabled={isSending}
         type="submit">
-        Send Message
+        {t('mail.send.btn')}
       </button>
+      {showSuccess && <div className="text-green-500 mt-4">{t('mail.success.tips')}</div>}
     </form>
   );
 });

@@ -52,5 +52,18 @@
   "education.scnu.title": "Bachelor of Physics",
   "education.scnu.location": "South China Normal University",
   "education.scnu.date": "July 2021",
-  "education.scnu.content": "I specialized in Physics during my university studies, delving deeply into quantum mechanics, electrodynamics, and linear algebra. I also expanded my academic horizon with courses in education and educational psychology, aiming to integrate core scientific principles with effective teaching methodologies."
+  "education.scnu.content": "I specialized in Physics during my university studies, delving deeply into quantum mechanics, electrodynamics, and linear algebra. I also expanded my academic horizon with courses in education and educational psychology, aiming to integrate core scientific principles with effective teaching methodologies.",
+
+  "work.title": "Work",
+  "work.nd.title": "Senior Software Engineer",
+  "work.nd.location": "NetDragon Websoft Holdings Limited",
+  "work.nd.date": "April 2020 - February 2023",
+
+  "mail.title": "Get in touch.",
+  "mail.description": "You can send me a message directly, or contact me through the following methods:",
+  "mail.success.tips": "Email sent successfully. I have received your email and will get back to you as soon as I review it. Thank you!",
+  "mail.send.btn": "Send Message",
+  "mail.placeholder.name": "Name",
+  "mail.placeholder.mail": "Mail",
+  "mail.placeholder.message": "Message"
 }
