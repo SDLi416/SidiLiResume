@@ -6,6 +6,7 @@ import {useTranslation} from '../../../hooks/useTranslation';
 const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
   const {title, date, location, content} = item;
   const {t} = useTranslation();
+  const contentStrs = t(content).split('\n');
   return (
     <div className="flex flex-col pb-8 text-center last:pb-0 md:text-left">
       <div className="flex flex-col pb-4">
@@ -16,7 +17,14 @@ const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
           <span className="flex-1 text-sm sm:flex-none">{t(date)}</span>
         </div>
       </div>
-      {t(content)}
+      {contentStrs.map((str) => {
+        if(str === '<br>') {return <br />}
+        return (
+          <p>
+            {str}
+          </p>
+          )
+      })}
     </div>
   );
 });

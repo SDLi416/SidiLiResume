@@ -297,10 +297,22 @@ export const experience: TimelineItem[] = [
     content: 'work.nd.content',
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: '111',
+    date: 'work.miaodou.date',
+    location: 'work.miaodou.location',
+    title: 'work.miaodou.title',
+    content: 'work.miaodou.content',
+  },
+  {
+    date: 'work.babyfs.date',
+    location: 'work.babyfs.location',
+    title: 'work.babyfs.title',
+    content: 'work.babyfs.content',
+  },
+  {
+    date: 'work.breo.date',
+    location: 'work.breo.location',
+    title: 'work.breo.title',
+    content: 'work.breo.content',
   },
 ];
 
