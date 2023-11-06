@@ -35,6 +35,7 @@ import {
   ContactType,
   Hero,
   HomepageMeta,
+  PortfolioIds,
   PortfolioItem,
   SkillGroup,
   Social,
@@ -130,70 +131,100 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'skill.mobile.title',
     skills: [
       {
-        name: 'English',
+        name: 'skill.mobile.1',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'skill.mobile.2',
+        level: 10,
       },
       {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
+        name: 'skill.mobile.3',
+        level: 8,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'skill.fe.title',
     skills: [
       {
-        name: 'Node.js',
+        name: 'skill.fe.1',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'skill.fe.2',
+        level: 8,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'skill.fe.3',
+        level: 5,
+      },
+    ],
+  },  
+  {
+    name: 'skill.ai.title',
+    skills: [
+      {
+        name: 'skill.ai.1',
+        level: 8,
+      },
+      {
+        name: 'skill.ai.2',
+        level: 6,
+      },
+      {
+        name: 'skill.ai.3',
+        level: 5,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'skill.aigc.title',
     skills: [
       {
-        name: 'React Native',
+        name: 'skill.aigc.1',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'skill.aigc.2',
+        level: 8,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'skill.aigc.3',
+        level: 8,
+      },
+    ],
+  },
+  {
+    name: 'skill.xr.title',
+    skills: [
+      {
+        name: 'skill.xr.1',
+        level: 8,
+      },
+      {
+        name: 'skill.xr.2',
+        level: 5,
+      },
+    ],
+  },
+  {
+    name: 'skill.lan.title',
+    skills: [
+      {
+        name: 'skill.lan.1',
+        level: 10,
+      },
+      {
+        name: 'skill.lan.2',
+        level: 8,
+      },
+      {
+        name: 'skill.lan.3',
+        level: 6,
       },
     ],
   },
@@ -208,67 +239,19 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Give a short description of your project here.',
     url: 'https://reactresume.com',
     image: porfolioImage1,
+    fullDescription: 'Give a full description of your project here.',
+    role: 'Frontend Developer',
+    duration: 'Jan 2020 - Present',
+    achievements: 'Achievements: ',
   },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
+];
+
+export const portfolioIds: PortfolioIds[] = [
+  {id: "iheart", image: porfolioImage1, url: "https://www.qimai.cn/app/baseinfo/appid/1136489668/country/cn"},
+  {id: "cowlevel", image: porfolioImage2, url: "https://apps.apple.com/cn/app/id1342182891"},
+  {id: "babyfs", image: porfolioImage3, url: "https://apps.apple.com/cn/app/id1229566596"},
+  {id: "soundbridge", image: porfolioImage4, url: "https://soundbridge.com.cn/"},
+  {id: "reviewhelper", image: porfolioImage5},
 ];
 
 /**

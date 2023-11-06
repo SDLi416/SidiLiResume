@@ -1,19 +1,41 @@
 import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
-import Image from 'next/image';
+import Image, {StaticImageData} from 'next/image';
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
 
 import {isMobile} from '../../config';
-import {portfolioItems, SectionId} from '../../data/data';
+import {portfolioIds, SectionId} from '../../data/data';
 import {PortfolioItem} from '../../data/dataDef';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
+import {useTranslation} from '../../hooks/useTranslation';
 import Section from '../Layout/Section';
+import ProjectModal from './ProjectModal';
 
 const Portfolio: FC = memo(() => {
+  const {t} = useTranslation();
+  const createProjectModel = (projectId: string, image: string | StaticImageData, url?: string):PortfolioItem  => {
+    const result: PortfolioItem = {
+      title: `projects.${projectId}.title`,
+      description: `projects.${projectId}.description`,
+      image: image,
+      fullDescription: `projects.${projectId}.fullDescription`,
+      role: `projects.${projectId}.role`,
+      duration: `projects.${projectId}.duration`,
+      achievements: `projects.${projectId}.achievements`,
+      url: url ?? '',
+    };
+
+    return result;
+  }
+
+  const portfolioItems: PortfolioItem[] = portfolioIds.map((project) => {
+    return createProjectModel(project.id, project.image, project.url);
+  });
+
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
+        <h2 className="self-center text-xl font-bold text-white">{t("projects.title")}</h2>
         <div className=" w-full columns-2 md:columns-3 lg:columns-4">
           {portfolioItems.map((item, index) => {
             const {title, image} = item;
@@ -38,11 +60,12 @@ const Portfolio: FC = memo(() => {
 Portfolio.displayName = 'Portfolio';
 export default Portfolio;
 
-const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, description}}) => {
+const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item}) => {
   const [mobile, setMobile] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const linkRef = useRef<HTMLAnchorElement>(null);
-
+  const [showModal, setShowModal] = useState(false);
+  const {t} = useTranslation();
   useEffect(() => {
     // Avoid hydration styling errors by setting mobile in useEffect
     if (isMobile) {
@@ -53,6 +76,7 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
 
   const handleItemClick = useCallback(
     (event: MouseEvent<HTMLElement>) => {
+      setShowModal(true);
       if (mobile && !showOverlay) {
         event.preventDefault();
         setShowOverlay(!showOverlay);
@@ -68,17 +92,16 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
         {'opacity-0 hover:opacity-80': !mobile},
         showOverlay ? 'opacity-80' : 'opacity-0',
       )}
-      href={url}
       onClick={handleItemClick}
-      ref={linkRef}
       target="_blank">
       <div className="relative h-full w-full p-4">
         <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
-          <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
-          <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
+          <h2 className="text-center font-bold text-white opacity-100">{t(item.title)}</h2>
+          <p className="text-xs text-white opacity-100 sm:text-sm">{t(item.description)}</p>
         </div>
         <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />
       </div>
+      <ProjectModal isOpen={showModal} project={item} setIsOpen={setShowModal} />
     </a>
   );
 });

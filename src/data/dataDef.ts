@@ -79,8 +79,18 @@ export interface SkillGroup {
 export interface PortfolioItem {
   title: string;
   description: string;
+  role: string;
+  duration: string;
+  fullDescription: string;
+  achievements: string;
   url: string;
   image: string | StaticImageData;
+}
+
+export interface PortfolioIds {
+  id: string;
+  image: string | StaticImageData;
+  url?: string;
 }
 
 /**
