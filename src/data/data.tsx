@@ -306,19 +306,19 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
+      name: '王聪',
+      text: '作为李思迪的前上司，我时常觉得以这个薪资招到他实在太值了。他在iOS开发方面的专业知识已经非常扎实，并且他对AI和web前端技术的持续学习显示了他对技术的热情和适应能力。思迪不仅自发学习新技术，而且经常在团队中积极推动技术革新，并乐于分享知识，激发团队成长。他为工作带来的价值远超他的薪资，我坚信他会为任何团队带来连续的动力和成功。',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: '陈浩然',
+      text: '作为思迪的前同事，我很高兴与他在多个iOS项目上合作。思迪不仅具有深厚的专业技能，而且他对新技术的适应能力和学习速度令人印象深刻。他的代码写作既严谨又高效，能够在保证质量的同时加快开发进程。更难能可贵的是，思迪拥有卓越的团队合作精神，他的沟通能力和对项目的承诺，极大地提升了团队的整体表现。无论是在面对复杂问题时的冷静思考，还是在项目要求严格限时完成时的出色表现，思迪都证明了自己是一名值得信赖的iOS开发者。我毫不犹豫地推荐思迪，相信他将为任何团队带来宝贵的贡献。',
+      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/12.jpg',
+    },
+    {
+      name: 'Jordan Smith',
+      text: 'Working with Sidi Li was a seamless and enjoyable experience, despite the miles between us—he in China, and I in the U.S. We never met face-to-face, yet his contributions to our web project felt as close and personal as any in-office collaboration. Sidi\'s deep knowledge in iOS, coupled with his proactive pursuit of AI and front-end development skills, truly sets him apart. His passion for technology is matched by his willingness to share insights, making our remote teamwork a resounding success.',
+      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/129.jpg',
     },
   ],
 };
