@@ -148,5 +148,7 @@
   "mail.send.btn": "发送消息",
   "mail.placeholder.name": "昵称",
   "mail.placeholder.mail": "联系邮箱",
-  "mail.placeholder.message": "信息内容"
+  "mail.placeholder.message": "信息内容",
+
+  "resume.link": "assets/cn/resume.pdf"
 }

@@ -149,5 +149,7 @@
   "mail.send.btn": "Send Message",
   "mail.placeholder.name": "Name",
   "mail.placeholder.mail": "Mail",
-  "mail.placeholder.message": "Message"
+  "mail.placeholder.message": "Message",
+
+  "resume.link": "assets/en/resume.pdf"
 }
