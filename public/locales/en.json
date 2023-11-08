@@ -19,6 +19,8 @@
   "hero.hobby.4": "technology and creativity",
   "hero.hobby.5": " can always forge new frontiers.",
 
+  "hero.notes": "Most of the materials on this site were created using generative artificial intelligence, including this note. My personal image was crafted by the LoRA model, which I trained independently.",
+
   "about": "About",
   "contact": "Contact",
   "portfolio": "Portfolio",
@@ -147,8 +149,8 @@
   "mail.description": "You can send me a message directly, or contact me through the following methods:",
   "mail.success.tips": "Email sent successfully. I have received your email and will get back to you as soon as I review it. Thank you!",
   "mail.send.btn": "Send Message",
-  "mail.placeholder.name": "Name",
-  "mail.placeholder.mail": "Mail",
+  "mail.placeholder.name": "Your name",
+  "mail.placeholder.mail": "Your mail",
   "mail.placeholder.message": "Message",
 
   "resume.link": "assets/en/resume.pdf"

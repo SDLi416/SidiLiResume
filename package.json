@@ -20,7 +20,7 @@
     "nodemailer": "^6.9.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "我现在有个next.js的项目，使用了intl做本地化。我现在有一个按钮，我想要点击了": "^6.5.1",
+    "react-intl": "^6.5.1",
     "ts-pattern": "^5.0.4"
   },
   "devDependencies": {
