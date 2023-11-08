@@ -17,10 +17,12 @@ const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
           <span className="flex-1 text-sm sm:flex-none">{t(date)}</span>
         </div>
       </div>
-      {contentStrs.map((str) => {
-        if(str === '<br>') {return <br />}
+      {contentStrs.map((str, index) => {
+        if(str === '[newline]') {
+          return <br key={`${str}-${index}`} />
+        }
         return (
-          <p>
+          <p key={`${str}-${index}`}>
             {str}
           </p>
           )

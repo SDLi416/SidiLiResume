@@ -7,7 +7,7 @@ import {
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
-import {FC, memo} from 'react';
+import {FC, Fragment, memo} from 'react';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
@@ -76,16 +76,16 @@ const HeroDescription: FC = memo(() => {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         {[...Array(9).keys()].map((i) => (
-          <>
+          <Fragment key={i}>
             {(i + 1) % 2 === 0 ? <strong className="text-stone-100">{t(`hero.intro.${i + 1}`)}</strong> : t(`hero.intro.${i + 1}`)}
-          </>
+          </Fragment>
         ))}
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         {[...Array(5).keys()].map((i) => (
-          <>
+          <Fragment key={i}>
             {(i + 1) % 2 === 0 ? <strong className="text-stone-100">{t(`hero.hobby.${i + 1}`)}</strong> : t(`hero.hobby.${i + 1}`)}
-          </>
+          </Fragment>
         ))}
       </p>
       <p className='prose-sm text-stone-200 sm:prose-base lg:prose-sm italic'>
@@ -109,7 +109,7 @@ export const heroData: Hero = {
       Icon: ArrowDownTrayIcon,
     },
     {
-      href: `#${SectionId.Contact}`,
+      href: 'contact.link',
       text: 'contact',
       primary: false,
     },

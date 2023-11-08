@@ -14,12 +14,12 @@ const Resume: FC = memo(() => {
       <div className="flex flex-col divide-y-2 divide-neutral-300">
         <ResumeSection title={t('education.title')}>
           {education.map((item, index) => (
-            <TimelineItem item={item} key={`${item.title}-${index}`} />
+            <TimelineItem item={item} key={`${item.title}-${index}-edu`} />
           ))}
         </ResumeSection>
         <ResumeSection title={t('work.title')}>
           {experience.map((item, index) => (
-            <TimelineItem item={item} key={`${item.title}-${index}`} />
+            <TimelineItem item={item} key={`${item.title}-${index}-exp`} />
           ))}
         </ResumeSection>
         <ResumeSection title={t("skills")}>

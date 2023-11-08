@@ -60,10 +60,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({isOpen, setIsOpen, project})
                   </p> */}
                   <br />
                   <p className="text-sm text-gray-500">
-                    {fullDescriptionStrs.map((str) => {
-                      if(str === '<br>') {return <br />}
+                    {fullDescriptionStrs.map((str, index) => {
+                      if(str === '[newline]') {return <br key={`space-${str}-${index}`} />}
                       return (
-                        <p>
+                        <p key={`${str}-${index}`}>
                           {str}
                         </p>
                         )
@@ -71,10 +71,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({isOpen, setIsOpen, project})
                   </p>
                   <br />
                   <p className="text-sm text-gray-500">
-                    {achievementsStrs.map((str) => {
-                      if(str === '<br>') {return <br />}
+                    {achievementsStrs.map((str, index) => {
+                      if(str === '[newline]') {
+                        return <br key={`${str}-${index}`} />
+                      }
                       return (
-                        <p>
+                        <p key={`${str}-${index}`}>
                           {str}
                         </p>
                         )
