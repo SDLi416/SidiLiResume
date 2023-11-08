@@ -30,7 +30,7 @@
   "testimonials": "推荐",
 
   "about.title": "关于我",
-  "about.description": "熟悉Web前端的资深iOS开发者, 对AR与AI技术充满热情。目前正在攻读人工智能硕士学位, 专注于将技术专长与创新思维结合, 期望在AI领域发挥我深厚的开发经验和热情。",
+  "about.description": "熟悉Web前端的资深iOS开发者，对AR与AI技术充满热情。目前正在攻读人工智能硕士学位，专注于将技术专长与创新思维结合，期望在AI领域发挥我深厚的开发经验和热情。",
 
   "about.label.location": "位置",
   "about.label.age": "年龄",
@@ -49,7 +49,7 @@
   "education.iit.title": "人工智能硕士",
   "education.iit.location": "伊利诺伊理工大学",
   "education.iit.date": "2024年春季",
-  "education.iit.content": "在攻读人工智能硕士期间, 我深入研习了人工智能的各个分支领域, 包括机器学习、深度学习、自然语言处理, 以及数据库原理等核心课程。这段学术经历不仅让我掌握了AI技术的前沿知识, 而且培养了我将理论应用于实践的能力。",
+  "education.iit.content": "在攻读人工智能硕士期间，我深入研习了人工智能的各个分支领域，包括机器学习、深度学习、自然语言处理，以及数据库原理等核心课程。这段学术经历不仅让我掌握了AI技术的前沿知识，而且培养了我将理论应用于实践的能力。",
   "education.scnu.title": "物理学学士",
   "education.scnu.location": "华南师范大学",
   "education.scnu.date": "2021年7月",
@@ -145,7 +145,7 @@
   "projects.reviewhelper.achievements": "通过精心设计的策略和智能化工具，成功克服了 App Store 审核过程中的常见障碍。该工具提升了代码的安全性，确保了应用结构的合规性，从而显著减少了审核过程中的拒绝风险。在实施本工具后，应用的通过率得到了显著提升，有效缩短了市场上线时间，并提高了应用的整体安全性和专业形象。",
 
   "mail.title": "请联系我",
-  "mail.description": "您可以直接给我发送消息, 或者通过以下方式来联系我:",
+  "mail.description": "您可以直接给我发送消息，或者通过以下方式来联系我:",
   "mail.success.tips": "消息已成功发送。我已收到您的消息，稍后查看后会尽快回复您。谢谢！",
   "mail.send.btn": "发送消息",
   "mail.placeholder.name": "昵称",
