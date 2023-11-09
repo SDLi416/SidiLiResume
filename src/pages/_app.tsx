@@ -4,47 +4,30 @@ import 'tailwindcss/tailwind.css';
 import '../globalStyles.scss';
 
 import type {AppProps} from 'next/app';
-import {memo,useEffect, useState} from 'react';
+import {memo} from 'react';
 import {IntlProvider} from 'react-intl';
 
 import {LanguageProvider} from '../contexts/LanguageContext';
 import {useLanguage} from '../hooks/useLanguage';
+import messages from '../locales';
 
 interface AppContentProps {
   Component: AppProps['Component'];
   pageProps: AppProps['pageProps'];
 }
 
+interface LocaleMessage {
+  [key: string]: string;
+}
 
 function AppContent({Component, pageProps}: AppContentProps) {
   const {locale} = useLanguage();
 
-  const [messages, setMessages] = useState({});
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    async function loadMessages() {
-      try {
-        const {default: loadedMessages} = await import(`../../public/locales/${locale}.json`);
-
-        setMessages(loadedMessages);
-
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Failed to load locale messages:', error);
-      }
-    }
-
-    loadMessages();
-  }, [locale]);
-
-  if (isLoading) {
-    return null; // or return a loading spinner
-  }
+  // 现在不再需要状态和效果来处理消息加载
+  const currentMessages: LocaleMessage = messages[locale] || messages['en']; // 默认回退到英语
 
   return (
-    <IntlProvider locale={locale} messages={messages}>
+    <IntlProvider locale={locale} messages={currentMessages}>
       <Component {...pageProps} />
     </IntlProvider>
   );
