@@ -1,10 +1,11 @@
 /* eslint-disable react-memo/require-memo */
+import router from 'next/router';
 import React, {useContext, useEffect, useState} from 'react';
 
 import {LanguageContext} from '../../contexts/LanguageContext';
 
 const LanSelectableButtons: React.FC = () => {
-  const {locale, changeLanguage} = useContext(LanguageContext) ?? {};
+  const {locale} = useContext(LanguageContext) ?? {};
   const [, setSelectedLanguage] = useState(locale === 'en' ? 'English' : '中文');
 
   useEffect(() => {
@@ -12,13 +13,19 @@ const LanSelectableButtons: React.FC = () => {
   }, [locale]);
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const language = event.target.value;
-    setSelectedLanguage(language);
-    if (language === 'English') {
-      changeLanguage?.('en');
-    } else if (language === '中文') {
-      changeLanguage?.('zh');
-    }
+    const languageName = event.target.value;
+    const newLocale = languageName === 'English' ? 'en' : 'zh';
+
+    // Update the query parameter
+    const newQuery = {
+      ...router.query,
+      lang: newLocale, // Set the new language
+    };
+
+    router.replace({
+      pathname: router.pathname,
+      query: newQuery,
+    }, undefined, {shallow: true}); // Perform the routing
   };
 
   return (

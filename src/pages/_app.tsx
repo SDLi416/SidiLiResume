@@ -1,14 +1,15 @@
 /* eslint-disable react-memo/require-memo */
-
+/* eslint-disable react-hooks/exhaustive-deps */
+// _app.tsx
 import 'tailwindcss/tailwind.css';
 import '../globalStyles.scss';
 
 import type {AppProps} from 'next/app';
-import {memo} from 'react';
+import {useRouter} from 'next/router';
+import {memo, useContext, useEffect} from 'react';
 import {IntlProvider} from 'react-intl';
 
-import {LanguageProvider} from '../contexts/LanguageContext';
-import {useLanguage} from '../hooks/useLanguage';
+import {LanguageContext,LanguageProvider} from '../contexts/LanguageContext';
 import messages from '../locales';
 
 interface AppContentProps {
@@ -20,26 +21,40 @@ interface LocaleMessage {
   [key: string]: string;
 }
 
-function AppContent({Component, pageProps}: AppContentProps) {
-  const {locale} = useLanguage();
+const AppContent = ({Component, pageProps}: AppContentProps) => {
+  const router = useRouter();
+  const languageContext = useContext(LanguageContext);
 
-  // 现在不再需要状态和效果来处理消息加载
-  const currentMessages: LocaleMessage = messages[locale] || messages['en']; // 默认回退到英语
+  // Update the language context when the URL query parameter changes
+  useEffect(() => {
+    const {lang} = router.query;
+    if (lang && typeof lang === 'string' && languageContext) {
+      languageContext.changeLanguage(lang);
+    }
+    // You should add languageContext to the dependency array
+    // but make sure to handle the potential infinite loop or re-render properly
+    // depending on your context implementation.
+  }, [router.query.lang, languageContext]);
+
+  if (!languageContext) {
+    // Handle the case where the language context is not available
+    return <p>Loading...</p>;
+  }
+
+  const currentMessages: LocaleMessage = messages[languageContext.locale] || messages['en']; // Fallback to English
 
   return (
-    <IntlProvider locale={locale} messages={currentMessages}>
+    <IntlProvider locale={languageContext.locale} messages={currentMessages}>
       <Component {...pageProps} />
     </IntlProvider>
   );
-}
+};
 
 const MyApp = memo(({Component, pageProps}: AppProps): JSX.Element => {
   return (
-    <>
-      <LanguageProvider>
-        <AppContent Component={Component} pageProps={pageProps} />
-      </LanguageProvider>
-    </>
+    <LanguageProvider>
+      <AppContent Component={Component} pageProps={pageProps} />
+    </LanguageProvider>
   );
 });
 
